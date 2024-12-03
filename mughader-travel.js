@@ -616,5 +616,3 @@ let ioniconsNomoduleScript = document.createElement('script');
 ioniconsNomoduleScript.setAttribute('nomodule', '');
 ioniconsNomoduleScript.src = 'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js';
 document.body.appendChild(ioniconsNomoduleScript);
-
-
