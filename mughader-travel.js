@@ -89,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Fade out by removing 'visible' class
         dynamicWordElement.classList.remove("visible");
 
-        // Wait for the fade-out animation to complete before switching the word
         setTimeout(() => {
             // Change word
             dynamicWordElement.innerText = words[currentIndex];
@@ -97,7 +96,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Fade in by adding 'visible' class
             dynamicWordElement.classList.add("visible");
-        }, 600); // Match the CSS fade-out duration (0.6s)
+        }, 200); // Match the new CSS fade-out duration (0.2s)
+
     }
 
     function animateTimer() {
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Start the animation after a small delay
         setTimeout(() => {
             lineTimerElement.style.transition = "transform 1.8s linear"; // Smooth scaling transition
-            lineTimerElement.style.transform = "scaleX(0.1)"; // Expand the line
+            lineTimerElement.style.transform = "scaleX(0.11)"; // Expand the line
         }, 50); // Delay to ensure the transition is applied
     }
 
