@@ -5,8 +5,6 @@
 
 /* General Reset */
 * {
-  /* font-family: "nawar", Sans-serif; */
-  /* font-family: "Almarai", Sans-serif; */
   font-family: "Noto Kufi Arabic", sans-serif;
   padding: 0;
   margin: 0;
@@ -16,8 +14,9 @@
 }
 
 body {
-  /* background: black; */
   background: white;
+  background: rgb(44, 44, 44);
+  color: white;
   padding-top: 100px;
   /* Match the header height */
 }
@@ -956,7 +955,7 @@ header.hide {
 .mughader_how_to_book_section {
   display: flex;
   flex-direction: column;
-  background: #383838;
+  background: rgb(44, 44, 44);
   direction: rtl;
   /* Ensure the text flows from right to left */
   text-align: right;
