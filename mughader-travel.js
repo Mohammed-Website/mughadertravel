@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Start the animation after a small delay
         setTimeout(() => {
             lineTimerElement.style.transition = "transform 1.8s linear"; // Smooth scaling transition
-            lineTimerElement.style.transform = "scaleX(0.11)"; // Expand the line
+            lineTimerElement.style.transform = "scaleX(0.12)"; // Expand the line
         }, 50); // Delay to ensure the transition is applied
     }
 
