@@ -1,27 +1,18 @@
-let lastScrollY = window.scrollY; // Track the last scroll position
+const header = document.getElementById('mughader_header');
+let lastScrollPosition = 0;
 
-// Ensure the header starts visible
-const header = document.querySelector("header");
-header.classList.add("show");
+window.addEventListener('scroll', () => {
+    const currentScrollPosition = window.scrollY;
 
-// Adjust padding to prevent content overlap
-document.body.style.paddingTop = `${header.offsetHeight}px`;
-
-// Scroll event to toggle header visibility
-window.addEventListener("scroll", () => {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY < lastScrollY) {
-        // Scrolling up: Show the header
-        header.classList.remove("hide");
-        header.classList.add("show");
+    if (currentScrollPosition > lastScrollPosition) {
+        // Scrolling down
+        header.classList.add('hidden');
     } else {
-        // Scrolling down: Hide the header
-        header.classList.remove("show");
-        header.classList.add("hide");
+        // Scrolling up
+        header.classList.remove('hidden');
     }
 
-    lastScrollY = currentScrollY; // Update the last scroll position
+    lastScrollPosition = currentScrollPosition;
 });
 
 
@@ -406,7 +397,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
+/* Customers Comments */
 let mughader_commentsArray = [
     {
         profileImage: "https://mughader.com/مكتب-للسفر-والسياحة/مكتب-للسفر-والسياحة-1.png",

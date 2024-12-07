@@ -17,7 +17,6 @@ body {
   background: white;
   background: rgb(44, 44, 44);
   color: white;
-  padding-top: 100px;
   /* Match the header height */
 }
 
@@ -272,22 +271,15 @@ body {
 /* Header Styling */
 header {
   background: black;
-  position: fixed;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
   z-index: 999;
-  transition: top 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* When the header slides into view */
-header.show {
-  top: 0;
-}
-
-/* When the header slides out of view */
-header.hide {
-  top: -140px;
+header.hidden {
+  transform: translateY(-100%);
 }
 
 .mughader_header_container {
@@ -1669,13 +1661,6 @@ footer * {
 
 /* Responsive Design */
 @media (max-width: 400px) {
-  body {
-    padding-top: 0px;
-  }
-
-
-
-
   .mughader_header_container {
     justify-content: space-between;
   }
